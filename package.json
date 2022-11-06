@@ -5,13 +5,16 @@
   "main": "server.js",
   "author": "Mis Arianto",
   "license": "MIT",
-  "scripts" : {
+  "scripts": {
     "tsc": "rm -rf build/ && tsc",
     "ts": "rm -rf build/ && tsc -w",
-    "dev" : "nodemon ./build/server.js"
+    "dev": "nodemon ./build/server.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",
     "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
