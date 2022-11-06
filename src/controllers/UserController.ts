@@ -38,7 +38,16 @@ class UserController implements IController {
     }
 
     update(req: Request, res: Response): Response {
-        return res.send("ini adalah endpoint update")
+        const {id} = req.params
+        const {name} = req.body
+
+        let person = data.find(item => item.id == id)
+        person.name = name
+
+        return res.send({
+            message: "successfully update data!",
+            person
+        })
     }
 
     delete(req: Request, res: Response): Response {
