@@ -1,1 +1,8 @@
-console.log("running program with Typescript")
+import express from "express";
+const app = express();
+
+app.route("/").get((req, res) => {
+    res.send("Hello World!");
+});
+
+app.listen(5000);
