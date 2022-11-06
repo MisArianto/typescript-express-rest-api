@@ -17,4 +17,6 @@ class App {
 
 const port: number = 5000
 const app = new App().app
-app.listen(port) 
+app.listen(port, () => {
+    console.log(`aplikasi running in port: ${port}`)
+}) 
