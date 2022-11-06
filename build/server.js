@@ -4,8 +4,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const app = (0, express_1.default)();
-app.route("/").get((req, res) => {
-    res.send("Hello World!");
-});
-app.listen(5000);
+class App {
+    constructor() {
+        this.app = (0, express_1.default)();
+    }
+    routes() {
+        this.app.route("/").get((req, res) => {
+            res.send("router root dengan TS");
+        });
+    }
+}
+const port = 5000;
+const app = new App().app;
+app.listen(port);

@@ -1,8 +1,19 @@
-import express from "express";
-const app = express();
+import express, { Application, Request, Response } from "express"
 
-app.route("/").get((req, res) => {
-    res.send("Hello World!");
-});
+class App {
+    public app: Application
 
-app.listen(5000);
+    constructor() {
+        this.app = express()
+    }
+
+    protected routes(): void {
+        this.app.route("/").get((req: Request, res: Response) => {
+            res.send("router root dengan TS")
+        })
+    }
+}
+
+const port: number = 5000
+const app = new App().app
+app.listen(port) 
