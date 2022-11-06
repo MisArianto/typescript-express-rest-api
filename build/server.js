@@ -9,6 +9,8 @@ const morgan_1 = __importDefault(require("morgan"));
 const compression_1 = __importDefault(require("compression"));
 const helmet_1 = __importDefault(require("helmet"));
 const cors_1 = __importDefault(require("cors"));
+// routers
+const UserRoutes_1 = __importDefault(require("./routers/UserRoutes"));
 class App {
     constructor() {
         this.app = (0, express_1.default)();
@@ -26,9 +28,7 @@ class App {
         this.app.route("/").get((req, res) => {
             res.send("router root dengan TS");
         });
-        this.app.route("/users").post((req, res) => {
-            res.send(req.body);
-        });
+        this.app.use("/users", UserRoutes_1.default);
     }
 }
 const port = 5000;
