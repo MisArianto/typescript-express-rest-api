@@ -1,0 +1,1 @@
+git rm -r --cached . // jika sebelumnya isi dalam file .gitignore tetap ter-push ke github jalankan perintah ini dan commit kembali
