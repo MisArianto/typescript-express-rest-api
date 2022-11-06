@@ -51,7 +51,12 @@ class UserController implements IController {
     }
 
     delete(req: Request, res: Response): Response {
-        return res.send("ini adalah endpoint delete")
+        const {id} = req.params
+        let person = data.filter(item => item.id != id)
+        return res.send({
+            message: "successfully delete data!",
+            person
+        })
     }
 }
 
