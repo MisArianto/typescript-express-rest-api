@@ -28,7 +28,7 @@ class App {
         this.app.route("/").get((req, res) => {
             res.send("router root dengan TS");
         });
-        this.app.use("/users", UserRoutes_1.default);
+        this.app.use("/api/v1/users", UserRoutes_1.default);
     }
 }
 const port = 5000;

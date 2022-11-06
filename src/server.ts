@@ -29,7 +29,7 @@ class App {
         this.app.route("/").get((req: Request, res: Response) => {
             res.send("router root dengan TS")
         })
-        this.app.use("/users", UserRoutes)
+        this.app.use("/api/v1/users", UserRoutes)
     }
 }
 
