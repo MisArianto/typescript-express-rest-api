@@ -14,7 +14,7 @@ class UserRoutes implements IRoute {
             res.send("route root user")
         })
 
-        this.router.post("/users", (req: Request, res: Response) => {
+        this.router.post("/", (req: Request, res: Response) => {
             res.send(req.body)
         })
     }

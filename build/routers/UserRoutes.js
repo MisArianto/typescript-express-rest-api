@@ -10,7 +10,7 @@ class UserRoutes {
         this.router.get("/", (req, res) => {
             res.send("route root user");
         });
-        this.router.post("/users", (req, res) => {
+        this.router.post("/", (req, res) => {
             res.send(req.body);
         });
     }
