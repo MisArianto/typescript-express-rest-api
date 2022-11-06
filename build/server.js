@@ -7,6 +7,7 @@ const express_1 = __importDefault(require("express"));
 class App {
     constructor() {
         this.app = (0, express_1.default)();
+        this.routes();
     }
     routes() {
         this.app.route("/").get((req, res) => {

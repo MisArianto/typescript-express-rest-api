@@ -5,6 +5,7 @@ class App {
 
     constructor() {
         this.app = express()
+        this.routes()
     }
 
     protected routes(): void {
