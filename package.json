@@ -1,0 +1,8 @@
+{
+  "name": "haqqa_code_rest_api",
+  "version": "1.0.0",
+  "description": "rest api haqqa code",
+  "main": "server.js",
+  "author": "Mis Arianto",
+  "license": "MIT"
+}
