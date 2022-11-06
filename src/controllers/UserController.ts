@@ -30,7 +30,11 @@ class UserController implements IController {
     }
 
     show(req: Request, res: Response): Response {
-        return res.send("ini adalah endpoint show")
+        const {id} = req.params
+
+        let person = data.find(item => item.id == id)
+
+        return res.send(person)
     }
 
     update(req: Request, res: Response): Response {
