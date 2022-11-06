@@ -2,11 +2,11 @@ import { Request, Response } from "express"
 import IController from "./ControllerInterface"
 
 let data: any[] = [
-    { id: 1, nama: "Mis Arianto" },
-    { id: 2, nama: "Nurmala Sari" },
-    { id: 3, nama: "Hadid Syurahbil" },
-    { id: 4, nama: "Agus Riana" },
-    { id: 5, nama: "Ahmad" },
+    { id: 1, name: "Mis Arianto" },
+    { id: 2, name: "Nurmala Sari" },
+    { id: 3, name: "Hadid Syurahbil" },
+    { id: 4, name: "Agus Riana" },
+    { id: 5, name: "Ahmad" },
 ]
 
 class UserController implements IController {
@@ -15,7 +15,18 @@ class UserController implements IController {
     }
 
     create(req: Request, res: Response): Response {
-        return res.send(req.body)
+        // destructing object 
+        const {id, name} = req.body
+
+        data.push({
+            id,
+            name
+        })
+
+        return res.send({
+            message: "successfully insert data!",
+            data
+        })
     }
 
     show(req: Request, res: Response): Response {
